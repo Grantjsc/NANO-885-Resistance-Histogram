@@ -1234,7 +1234,7 @@ Module CreateCSV_Module
             '"SELECT * FROM ProduceLog19748 WHERE Time BETWEEN '" & First & "'  AND '" & Last & "'"
             '"SELECT * FROM ProduceLog19783 WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
 
-            Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+            Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
             Dim query As String = "SELECT * FROM '" & dbNameoftb & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
             Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
@@ -1339,7 +1339,7 @@ Module CreateCSV_Module
 
     Sub FirstSheet()
         Dim PreviousTable = "ProduceLog" & PrevtbRef
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim query As String = "SELECT * FROM '" & PreviousTable & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
         Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
@@ -1389,7 +1389,7 @@ Module CreateCSV_Module
     End Sub
 
     Sub SecondSheet()
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim query As String = "SELECT * FROM '" & dbNameoftb & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
         Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
@@ -1541,9 +1541,12 @@ Module CameraResults_Module
 
     Public Supplier_tbName As String
     Sub CheckTable()
+
+        CopyFile()
+        Thread.Sleep(500)
         Dim DateUpdate As String = Date.Now.ToString("yyyy-MM-dd")
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
         'Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
         GetPrevTable()
@@ -1612,6 +1615,8 @@ Module CameraResults_Module
 
             NewDateRef = DateUpdate
             UpdateDateReference()
+
+            DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
         Else
@@ -1690,6 +1695,8 @@ Module CameraResults_Module
             NewDateRef = DateUpdate
             UpdateDateReference()
 
+            DeleteFile()
+
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
         End If
@@ -1697,7 +1704,7 @@ Module CameraResults_Module
 
     Sub EmergencyExport()
         Dim DateUpdate As String = Date.Now.ToString("yyyy-MM-dd")
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
         'Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
         GetPrevTable()
@@ -1765,6 +1772,8 @@ Module CameraResults_Module
             Form1.btnStart.Enabled = True
             Form1.btnChange.Enabled = True
             Form1.btnLot.Enabled = True
+
+            DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
@@ -1843,6 +1852,8 @@ Module CameraResults_Module
             Form1.btnChange.Enabled = True
             Form1.btnLot.Enabled = True
 
+            DeleteFile()
+
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
         End If
@@ -1860,7 +1871,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 1 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
         Try
-            Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+            Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
             Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -1921,7 +1932,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 2 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -1978,7 +1989,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 3 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -2035,7 +2046,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 4 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -2092,7 +2103,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 5 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -2149,7 +2160,7 @@ Module CameraResults_Module
         'Dim query As String = "SELECT t1.* FROM ProduceLog19783 t1 WHERE t1.CCD = 6 AND NOT EXISTS 
         '                        (SELECT 1 FROM ProduceLog19783 t2 WHERE t2.CCD = t1.CCD AND t2.Time > t1.Time);"
 
-        Dim connString As String = "Data Source=" & dbPath & ";Version=3"
+        Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim TableName As String = Date.Now.ToString("yyyy-MM-dd")
 
@@ -2193,6 +2204,21 @@ Module CameraResults_Module
                 command.ExecuteNonQuery()
             End Using
         End Using
+    End Sub
+
+End Module
+
+Module CopyDeleteFile_Module
+
+    Public TargetPastePath As String = "C:\Nano 885 data\ProduceLog.db"
+    Sub CopyFile()
+        My.Computer.FileSystem.CopyFile(
+           dbPath,
+           TargetPastePath)
+    End Sub
+
+    Sub DeleteFile()
+        My.Computer.FileSystem.DeleteFile(TargetPastePath)
     End Sub
 
 End Module
