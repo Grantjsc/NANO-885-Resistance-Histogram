@@ -386,4 +386,8 @@ Public Class Form1
         LogEndTime() 'Log the end Time
         CheckTable() 'Check table in db then save all results to db and export data to .csv file
     End Sub
+
+    Private Sub CHnageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CHnageToolStripMenuItem.Click
+        ChangeTiming_Form.ShowDialog()
+    End Sub
 End Class

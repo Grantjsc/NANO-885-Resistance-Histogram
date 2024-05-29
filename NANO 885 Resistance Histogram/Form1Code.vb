@@ -5,6 +5,7 @@ Imports System.Data.SQLite
 Imports System.IO
 Imports System.IO.Ports
 Imports System.Threading
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports LFPHWIADBLib
 
 '********* NANO 885 Part Number List ********
@@ -474,7 +475,7 @@ Module Form1Histogram_Module
             Form1.SerialPort1.Write("X" & vbCr)
             Form1.SerialPort1.Write("D001" & vbCr) 'delay set to 1ms
             Form1.SerialPort1.Write("X" & vbCr)
-            Thread.Sleep(10)
+            'Thread.Sleep(10)
         Catch ex As Exception
 
             MsgBox(ex.Message, vbCritical)
@@ -857,6 +858,9 @@ Module Form1Histogram_Module
             If Not Form1.SerialPort2.IsOpen Then
                 Form1.SerialPort2.Open()
             End If
+
+            GetTimer()
+            Form1.Timer1.Interval = TimerTiming
             Form1.Timer1.Enabled = True
             Form1.TimerQtyChecking.Enabled = True
             Form1.btnStart.Text = "Stop"
@@ -898,8 +902,8 @@ Module Form1Histogram_Module
 
                     setTegam()
                     SetHighLowAndNominal()
-                    Thread.Sleep(100)
                     Form1.SerialPort1.WriteLine("E" & vbCr)
+                    Form1.SerialPort1.Write("X" & vbCr)
 
                     'test_result() 'GOOD/HIGH/LOW or OPEN 
                     'Prog_count() 'histogram counter
@@ -1237,7 +1241,7 @@ Module CreateCSV_Module
             Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
             Dim query As String = "SELECT * FROM '" & dbNameoftb & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
-            Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
+            Dim dateNtime As String = Date.Now.ToString("MM-dd-yy HH_mm")
             Dim Year As String = Date.Now.ToString("yyyy")
             Dim Month As String = Date.Now.ToString("MMMM")
             Dim FolderPath As String = "C:\Nano 885 data\" & Year & "\" & Month & "\" & Form1.txtLotNumber.Text & " " & dateNtime & ".csv"
@@ -1342,7 +1346,7 @@ Module CreateCSV_Module
         Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim query As String = "SELECT * FROM '" & PreviousTable & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
-        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
+        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy HH_mm")
         Dim Year As String = Date.Now.ToString("yyyy")
         Dim Month As String = Date.Now.ToString("MMMM")
         Dim FolderPath As String = "C:\Nano 885 data\" & Year & "\" & Month & "\First Sheet " & Form1.txtLotNumber.Text & " " & dateNtime & ".csv"
@@ -1392,7 +1396,7 @@ Module CreateCSV_Module
         Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
 
         Dim query As String = "SELECT * FROM '" & dbNameoftb & "' WHERE Time > '" & StartOled & "' AND Time < '" & EndOled & "'"
-        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy hh_mmtt")
+        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy HH_mm")
         Dim Year As String = Date.Now.ToString("yyyy")
         Dim Month As String = Date.Now.ToString("MMMM")
         Dim FolderPath As String = "C:\Nano 885 data\" & Year & "\" & Month & "\Second Sheet " & Form1.txtLotNumber.Text & " " & dateNtime & ".csv"
@@ -1543,7 +1547,7 @@ Module CameraResults_Module
     Sub CheckTable()
 
         CopyFile()
-        Thread.Sleep(500)
+        Thread.Sleep(1000)
         Dim DateUpdate As String = Date.Now.ToString("yyyy-MM-dd")
 
         Dim connString As String = "Data Source=" & TargetPastePath & ";Version=3"
@@ -1616,7 +1620,8 @@ Module CameraResults_Module
             NewDateRef = DateUpdate
             UpdateDateReference()
 
-            DeleteFile()
+            'Thread.Sleep(1000)
+            'DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
         Else
@@ -1695,7 +1700,8 @@ Module CameraResults_Module
             NewDateRef = DateUpdate
             UpdateDateReference()
 
-            DeleteFile()
+            'Thread.Sleep(1000)
+            'DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
@@ -1773,7 +1779,7 @@ Module CameraResults_Module
             Form1.btnChange.Enabled = True
             Form1.btnLot.Enabled = True
 
-            DeleteFile()
+            'DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
@@ -1852,7 +1858,7 @@ Module CameraResults_Module
             Form1.btnChange.Enabled = True
             Form1.btnLot.Enabled = True
 
-            DeleteFile()
+            'DeleteFile()
 
             MsgBox(Form1.txtLotNumber.Text & " Done!")
 
@@ -2212,13 +2218,46 @@ Module CopyDeleteFile_Module
 
     Public TargetPastePath As String = "C:\Nano 885 data\ProduceLog.db"
     Sub CopyFile()
+        'My.Computer.FileSystem.CopyFile(
+        '   dbPath,
+        '   TargetPastePath)
+
         My.Computer.FileSystem.CopyFile(
-           dbPath,
-           TargetPastePath)
+            dbPath,
+            TargetPastePath,
+            Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs,
+            Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
     End Sub
 
     Sub DeleteFile()
         My.Computer.FileSystem.DeleteFile(TargetPastePath)
+    End Sub
+
+End Module
+
+Module ChangeTriggerTiming_Module
+    Public TimerTiming As String
+    Public NewTimerTiming As String
+
+
+    Sub GetTimer()
+        Dim Time As String = System.Configuration.ConfigurationManager.AppSettings("Timing")
+        Console.WriteLine(Time)
+
+        TimerTiming = Time
+    End Sub
+
+    Public config As Configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)
+
+    Sub GetNewTimer()
+        NewTimerTiming = ChangeTiming_Form.txtNewTiming.Text
+    End Sub
+    Sub ChangeOldTiming()
+        config.AppSettings.Settings("Timing").Value = NewTimerTiming ' Rewrite 
+        config.Save(ConfigurationSaveMode.Modified) ' save the new value
+
+        ConfigurationManager.RefreshSection("appSettings") 'refresh
     End Sub
 
 End Module

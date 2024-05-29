@@ -31,6 +31,7 @@ Partial Class Form1
         Me.ChangeDbTableReferenceToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangePathOfPartNumberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeSerialNameToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CHnageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnEMsave = New System.Windows.Forms.Button()
@@ -199,7 +200,7 @@ Partial Class Form1
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeDbTableReferenceToolStripMenuItem1, Me.ChangePathOfPartNumberToolStripMenuItem, Me.ChangeSerialNameToolStripMenuItem1})
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeDbTableReferenceToolStripMenuItem1, Me.ChangePathOfPartNumberToolStripMenuItem, Me.ChangeSerialNameToolStripMenuItem1, Me.CHnageToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
@@ -225,6 +226,13 @@ Partial Class Form1
         Me.ChangeSerialNameToolStripMenuItem1.Name = "ChangeSerialNameToolStripMenuItem1"
         Me.ChangeSerialNameToolStripMenuItem1.Size = New System.Drawing.Size(233, 22)
         Me.ChangeSerialNameToolStripMenuItem1.Text = "Change Serial Name"
+        '
+        'CHnageToolStripMenuItem
+        '
+        Me.CHnageToolStripMenuItem.Image = CType(resources.GetObject("CHnageToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CHnageToolStripMenuItem.Name = "CHnageToolStripMenuItem"
+        Me.CHnageToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.CHnageToolStripMenuItem.Text = "Change Timing"
         '
         'PictureBox1
         '
@@ -956,6 +964,7 @@ Partial Class Form1
         Me.btnTest.TabIndex = 62
         Me.btnTest.Text = "Save"
         Me.btnTest.UseVisualStyleBackColor = True
+        Me.btnTest.Visible = False
         '
         'txtResult
         '
@@ -2011,6 +2020,7 @@ Partial Class Form1
         '
         'Timer1
         '
+        Me.Timer1.Interval = 90
         '
         'PanelMain
         '
@@ -2202,4 +2212,5 @@ Partial Class Form1
     Friend WithEvents ChangePathOfPartNumberToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ChangeSerialNameToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents btnTest As Button
+    Friend WithEvents CHnageToolStripMenuItem As ToolStripMenuItem
 End Class
