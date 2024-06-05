@@ -190,12 +190,13 @@ Partial Class Form1
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
+        Me.MenuToolStripMenuItem.Visible = False
         '
         'ViewLotDetailsToolStripMenuItem
         '
         Me.ViewLotDetailsToolStripMenuItem.Image = CType(resources.GetObject("ViewLotDetailsToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ViewLotDetailsToolStripMenuItem.Name = "ViewLotDetailsToolStripMenuItem"
-        Me.ViewLotDetailsToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ViewLotDetailsToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.ViewLotDetailsToolStripMenuItem.Text = "View Lot Details"
         '
         'SettingsToolStripMenuItem
@@ -210,28 +211,28 @@ Partial Class Form1
         '
         Me.ChangeDbTableReferenceToolStripMenuItem1.Image = CType(resources.GetObject("ChangeDbTableReferenceToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ChangeDbTableReferenceToolStripMenuItem1.Name = "ChangeDbTableReferenceToolStripMenuItem1"
-        Me.ChangeDbTableReferenceToolStripMenuItem1.Size = New System.Drawing.Size(233, 22)
+        Me.ChangeDbTableReferenceToolStripMenuItem1.Size = New System.Drawing.Size(237, 26)
         Me.ChangeDbTableReferenceToolStripMenuItem1.Text = "Change Db Table Reference"
         '
         'ChangePathOfPartNumberToolStripMenuItem
         '
         Me.ChangePathOfPartNumberToolStripMenuItem.Image = CType(resources.GetObject("ChangePathOfPartNumberToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ChangePathOfPartNumberToolStripMenuItem.Name = "ChangePathOfPartNumberToolStripMenuItem"
-        Me.ChangePathOfPartNumberToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.ChangePathOfPartNumberToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.ChangePathOfPartNumberToolStripMenuItem.Text = "Change Path of Part Number"
         '
         'ChangeSerialNameToolStripMenuItem1
         '
         Me.ChangeSerialNameToolStripMenuItem1.Image = CType(resources.GetObject("ChangeSerialNameToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ChangeSerialNameToolStripMenuItem1.Name = "ChangeSerialNameToolStripMenuItem1"
-        Me.ChangeSerialNameToolStripMenuItem1.Size = New System.Drawing.Size(233, 22)
+        Me.ChangeSerialNameToolStripMenuItem1.Size = New System.Drawing.Size(237, 26)
         Me.ChangeSerialNameToolStripMenuItem1.Text = "Change Serial Name"
         '
         'CHnageToolStripMenuItem
         '
         Me.CHnageToolStripMenuItem.Image = CType(resources.GetObject("CHnageToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CHnageToolStripMenuItem.Name = "CHnageToolStripMenuItem"
-        Me.CHnageToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.CHnageToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.CHnageToolStripMenuItem.Text = "Change Timing"
         '
         'PictureBox1

@@ -1274,53 +1274,53 @@ Module CreateCSV_Module
                                     writer.WriteLine()
                                 End While
 
-                                ' CCD1
-                                writer.Write(vbCrLf & "CCD 1 Total, OKAY, Plug Defect, Wire Defect")
-                                writer.WriteLine()
+                                '' CCD1
+                                'writer.Write(vbCrLf & "CCD 1 Total, OKAY, Plug Defect, Wire Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD 1
-                                writer.Write(CCD1Total & "," & CCD1OK & "," & CCD1PlugDefect & "," & CCD1WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD 1
+                                'writer.Write(CCD1Total & "," & CCD1OK & "," & CCD1PlugDefect & "," & CCD1WireDefect)
+                                'writer.WriteLine()
 
-                                ' CCD2
-                                writer.Write(vbCrLf & "CCD 2 Total, OKAY, Plug Defect, Wire Defect")
-                                writer.WriteLine()
+                                '' CCD2
+                                'writer.Write(vbCrLf & "CCD 2 Total, OKAY, Plug Defect, Wire Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD2
-                                writer.Write(CCD2Total & "," & CCD2OK & "," & CCD2PlugDefect & "," & CCD2WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD2
+                                'writer.Write(CCD2Total & "," & CCD2OK & "," & CCD2PlugDefect & "," & CCD2WireDefect)
+                                'writer.WriteLine()
 
-                                ' CCD3
-                                writer.Write(vbCrLf & "CCD 3 Total, OKAY, Plug Defect, Wire Defect")
-                                writer.WriteLine()
+                                '' CCD3
+                                'writer.Write(vbCrLf & "CCD 3 Total, OKAY, Plug Defect, Wire Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD3
-                                writer.Write(CCD3Total & "," & CCD3OK & "," & CCD3PlugDefect & "," & CCD3WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD3
+                                'writer.Write(CCD3Total & "," & CCD3OK & "," & CCD3PlugDefect & "," & CCD3WireDefect)
+                                'writer.WriteLine()
 
-                                ' CCD4
-                                writer.Write(vbCrLf & "CCD 4 Total, OKAY, Plug Defect, Wire Defect")
-                                writer.WriteLine()
+                                '' CCD4
+                                'writer.Write(vbCrLf & "CCD 4 Total, OKAY, Plug Defect, Wire Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD4
-                                writer.Write(CCD4Total & "," & CCD4OK & "," & CCD4PlugDefect & "," & CCD4WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD4
+                                'writer.Write(CCD4Total & "," & CCD4OK & "," & CCD4PlugDefect & "," & CCD4WireDefect)
+                                'writer.WriteLine()
 
-                                ' CCD5
-                                writer.Write(vbCrLf & "CCD 5 Total, OKAY, Plug Defect, Sheet Defect")
-                                writer.WriteLine()
+                                '' CCD5
+                                'writer.Write(vbCrLf & "CCD 5 Total, OKAY, Plug Defect, Sheet Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD5
-                                writer.Write(CCD5Total & "," & CCD5OK & "," & CCD5PlugDefect & "," & CCD5WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD5
+                                'writer.Write(CCD5Total & "," & CCD5OK & "," & CCD5PlugDefect & "," & CCD5WireDefect)
+                                'writer.WriteLine()
 
-                                ' CCD6
-                                writer.Write(vbCrLf & "CCD 6 Total, OKAY, Plug Defect, Sheet Defect")
-                                writer.WriteLine()
+                                '' CCD6
+                                'writer.Write(vbCrLf & "CCD 6 Total, OKAY, Plug Defect, Sheet Defect")
+                                'writer.WriteLine()
 
-                                ' Add values for CCD6
-                                writer.Write(CCD6Total & "," & CCD6OK & "," & CCD6PlugDefect & "," & CCD6WireDefect)
-                                writer.WriteLine()
+                                '' Add values for CCD6
+                                'writer.Write(CCD6Total & "," & CCD6OK & "," & CCD6PlugDefect & "," & CCD6WireDefect)
+                                'writer.WriteLine()
                             End Using
                         End Using
                     End Using
@@ -1429,53 +1429,53 @@ Module CreateCSV_Module
                                 writer.WriteLine()
                             End While
 
-                            ' CCD1
-                            writer.Write(vbCrLf & "CCD 1 Total, OKAY, Plug Defect, Wire Defect")
-                            writer.WriteLine()
+                            '' CCD1
+                            'writer.Write(vbCrLf & "CCD 1 Total, OKAY, Plug Defect, Wire Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD 1
-                            writer.Write(CCD1Total & "," & CCD1OK & "," & CCD1PlugDefect & "," & CCD1WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD 1
+                            'writer.Write(CCD1Total & "," & CCD1OK & "," & CCD1PlugDefect & "," & CCD1WireDefect)
+                            'writer.WriteLine()
 
-                            ' CCD2
-                            writer.Write(vbCrLf & "CCD 2 Total, OKAY, Plug Defect, Wire Defect")
-                            writer.WriteLine()
+                            '' CCD2
+                            'writer.Write(vbCrLf & "CCD 2 Total, OKAY, Plug Defect, Wire Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD2
-                            writer.Write(CCD2Total & "," & CCD2OK & "," & CCD2PlugDefect & "," & CCD2WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD2
+                            'writer.Write(CCD2Total & "," & CCD2OK & "," & CCD2PlugDefect & "," & CCD2WireDefect)
+                            'writer.WriteLine()
 
-                            ' CCD3
-                            writer.Write(vbCrLf & "CCD 3 Total, OKAY, Plug Defect, Wire Defect")
-                            writer.WriteLine()
+                            '' CCD3
+                            'writer.Write(vbCrLf & "CCD 3 Total, OKAY, Plug Defect, Wire Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD3
-                            writer.Write(CCD3Total & "," & CCD3OK & "," & CCD3PlugDefect & "," & CCD3WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD3
+                            'writer.Write(CCD3Total & "," & CCD3OK & "," & CCD3PlugDefect & "," & CCD3WireDefect)
+                            'writer.WriteLine()
 
-                            ' CCD4
-                            writer.Write(vbCrLf & "CCD 4 Total, OKAY, Plug Defect, Wire Defect")
-                            writer.WriteLine()
+                            '' CCD4
+                            'writer.Write(vbCrLf & "CCD 4 Total, OKAY, Plug Defect, Wire Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD4
-                            writer.Write(CCD4Total & "," & CCD4OK & "," & CCD4PlugDefect & "," & CCD4WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD4
+                            'writer.Write(CCD4Total & "," & CCD4OK & "," & CCD4PlugDefect & "," & CCD4WireDefect)
+                            'writer.WriteLine()
 
-                            ' CCD5
-                            writer.Write(vbCrLf & "CCD 5 Total, OKAY, Plug Defect, Sheet Defect")
-                            writer.WriteLine()
+                            '' CCD5
+                            'writer.Write(vbCrLf & "CCD 5 Total, OKAY, Plug Defect, Sheet Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD5
-                            writer.Write(CCD5Total & "," & CCD5OK & "," & CCD5PlugDefect & "," & CCD5WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD5
+                            'writer.Write(CCD5Total & "," & CCD5OK & "," & CCD5PlugDefect & "," & CCD5WireDefect)
+                            'writer.WriteLine()
 
-                            ' CCD6
-                            writer.Write(vbCrLf & "CCD 6 Total, OKAY, Plug Defect, Sheet Defect")
-                            writer.WriteLine()
+                            '' CCD6
+                            'writer.Write(vbCrLf & "CCD 6 Total, OKAY, Plug Defect, Sheet Defect")
+                            'writer.WriteLine()
 
-                            ' Add values for CCD6
-                            writer.Write(CCD6Total & "," & CCD6OK & "," & CCD6PlugDefect & "," & CCD6WireDefect)
-                            writer.WriteLine()
+                            '' Add values for CCD6
+                            'writer.Write(CCD6Total & "," & CCD6OK & "," & CCD6PlugDefect & "," & CCD6WireDefect)
+                            'writer.WriteLine()
                         End Using
                     End Using
                 End Using
@@ -1485,6 +1485,88 @@ Module CreateCSV_Module
 
         Catch ex As Exception
             MessageBox.Show("Error exporting data: " & ex.Message)
+        Finally
+
+        End Try
+    End Sub
+End Module
+
+Module SavingCopy_Module
+
+    Sub CopyTheDbSaving()
+
+        GetLotNumberHistory()
+
+        If StartProRef = EndProRef Then
+            CopyDbToday()
+        Else
+
+            Yesterdate()
+            Thread.Sleep(500)
+            CopyDbToday()
+        End If
+    End Sub
+
+    Sub Yesterdate()
+
+        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy HH_mm")
+        Dim Year As String = Date.Now.ToString("yyyy")
+        Dim Month As String = Date.Now.ToString("MMMM")
+
+        Dim DateToday As Date = Now.AddDays(-1)
+        Dim YesterD As String = DateToday.ToString("dd")
+
+        Dim FolderPath As String = "C:\Nano 885 data\" & Year & "\" & Month & "\" & YesterD & "\ProduceLog.db"
+
+        Try
+
+            ' Ensure the directory exists or create it
+            Dim directoryPath As String = Path.GetDirectoryName(FolderPath)
+            If Not Directory.Exists(directoryPath) Then
+                Directory.CreateDirectory(directoryPath)
+            End If
+
+            My.Computer.FileSystem.CopyFile(
+                    dbPath,
+                    FolderPath,
+                    Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs,
+                    Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
+
+
+        Catch ex As Exception
+            MessageBox.Show("Error copying data: " & ex.Message)
+        Finally
+
+        End Try
+
+    End Sub
+
+    Sub CopyDbToday()
+        Dim dateNtime As String = Date.Now.ToString("MM-dd-yy HH_mm")
+        Dim Year As String = Date.Now.ToString("yyyy")
+        Dim Month As String = Date.Now.ToString("MMMM")
+        Dim DateToday As String = Date.Now.ToString("dd")
+        Dim FolderPath As String = "C:\Nano 885 data\" & Year & "\" & Month & "\" & DateToday & "\ProduceLog.db"
+
+        Try
+
+            ' Ensure the directory exists or create it
+            Dim directoryPath As String = Path.GetDirectoryName(FolderPath)
+            If Not Directory.Exists(directoryPath) Then
+                Directory.CreateDirectory(directoryPath)
+            End If
+
+            My.Computer.FileSystem.CopyFile(
+                dbPath,
+                FolderPath,
+                Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs,
+                Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
+
+
+        Catch ex As Exception
+            MessageBox.Show("Error copying data: " & ex.Message)
         Finally
 
         End Try
@@ -1596,26 +1678,27 @@ Module CameraResults_Module
 
             Thread.Sleep(100)
 
-            GetCCD1Result()
-            LogResultofCCD1()
+            'GetCCD1Result()
+            'LogResultofCCD1()
 
-            GetCCD2Result()
-            LogResultofCCD2()
+            'GetCCD2Result()
+            'LogResultofCCD2()
 
-            GetCCD3Result()
-            LogResultofCCD3()
+            'GetCCD3Result()
+            'LogResultofCCD3()
 
-            GetCCD4Result()
-            LogResultofCCD4()
+            'GetCCD4Result()
+            'LogResultofCCD4()
 
-            GetCCD5Result()
-            LogResultofCCD5()
+            'GetCCD5Result()
+            'LogResultofCCD5()
 
-            GetCCD6Result()
-            LogResultofCCD6()
-            Thread.Sleep(100)
+            'GetCCD6Result()
+            'LogResultofCCD6()
+            'Thread.Sleep(100)
 
-            ExportToCSV() 'Export to CSV File
+            'ExportToCSV() 'Export to CSV File
+            CopyTheDbSaving()
 
             NewDateRef = DateUpdate
             UpdateDateReference()
@@ -1673,26 +1756,27 @@ Module CameraResults_Module
 
             Thread.Sleep(100)
 
-            GetCCD1Result()
-            LogResultofCCD1()
+            'GetCCD1Result()
+            'LogResultofCCD1()
 
-            GetCCD2Result()
-            LogResultofCCD2()
+            'GetCCD2Result()
+            'LogResultofCCD2()
 
-            GetCCD3Result()
-            LogResultofCCD3()
+            'GetCCD3Result()
+            'LogResultofCCD3()
 
-            GetCCD4Result()
-            LogResultofCCD4()
+            'GetCCD4Result()
+            'LogResultofCCD4()
 
-            GetCCD5Result()
-            LogResultofCCD5()
+            'GetCCD5Result()
+            'LogResultofCCD5()
 
-            GetCCD6Result()
-            LogResultofCCD6()
-            Thread.Sleep(100)
+            'GetCCD6Result()
+            'LogResultofCCD6()
+            'Thread.Sleep(100)
 
-            ExportToCSV() 'Export to CSV File
+            'ExportToCSV() 'Export to CSV File
+            CopyTheDbSaving()
 
             NewtbRef = TableName
             UpdatedbTableReference()
